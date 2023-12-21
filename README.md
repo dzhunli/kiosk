@@ -39,7 +39,7 @@ Now you can burn the received iso to the drive using such tools as:
 
 ## DEMO OF INSTALLING
 
-<video src='.preview/kiosk.mp4'</video>
+<video src='.preview/kiosk.mp4'></video>
 
 ### Authors
 
