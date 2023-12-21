@@ -38,8 +38,8 @@ Now you can burn the received iso to the drive using such tools as:
 - balenaEtcher https://etcher.balena.io/
 
 ## DEMO OF INSTALLING
-![App video](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
+<video src='.preview/kiosk.mp4'/>
 
 ### Authors
 

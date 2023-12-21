@@ -36,7 +36,7 @@ google-chrome-stable \
     --disable-suggestions-service \
     --disable-save-password-bubble \
     --start-maximized \
-    --kiosk "<your_url>" &
+    --kiosk "http://example.org/" &
 EOF2
 chmod a+x "$autostart" 
 echo "/home/kiosk-user/.config/openbox/autostart" >> /home/kiosk-user/.bashrc
