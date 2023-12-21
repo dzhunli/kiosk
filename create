@@ -1,0 +1,6 @@
+#!/bin/bash
+rm -rf image_preseed.iso 
+rm -rf kiosk-netinstall.iso 
+cp ./SCRIPTS/preseed/postinst.sh /tmp/postinst.sh
+./SCRIPTS/preseed.sh -x -v -i debian-12.4.0-amd64-netinst.iso -p SCRIPTS/preseed/preseed.cfg -o kiosk-netinstall.iso
+rm /tmp/postinst.sh
