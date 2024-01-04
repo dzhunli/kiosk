@@ -25,12 +25,16 @@ debian-based kiosk distro
 - download debian as a base distro in repository directory [Debian12-bookworm-netinstall-amd64](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.4.0-amd64-netinst.iso)
 - make sure that you modify **./SCRIPTS/preseed/preseed.cfg** as your neeed
 - make sure that you modify  **./SCRIPTS/preseed/postinst.sh** as your need 
-    - in line of  **./SCRIPTS/preseed/postinst.sh** 39 set your url to show in kiosk
+    - in line of  **./SCRIPTS/preseed/postinst.sh** 41 set your url to show in kiosk
     - in line 6 **./SCRIPTS/preseed/postinst.sh** modify value *custom_port* it is port for ssh
 - make sure that in project dir you have correct base distro
-- run the command below
+- run the command below (create kiosk without cursor only for TOUCHSCREENS)
 ```bash
 sudo ./create 
+```
+- run the command below (create kiosk with cursor)
+```bash
+sudo ./create cursor
 ```
 Now you can burn the received iso to the drive using such tools as:
 - dd https://man7.org/linux/man-pages/man1/dd.1.html
@@ -39,7 +43,7 @@ Now you can burn the received iso to the drive using such tools as:
 
 ## DEMO OF INSTALLING
 
-<video src='https://raw.githubusercontent.com/dzhunli/kiosk/main/.preview/kiosk.mp4?token=GHSAT0AAAAAACL4HEGVZGMAUX66DIJ5Y7TWZMEGIPA'></video>
+<video src='.preview/kiosk.mp4'</video>
 
 ### Authors
 

@@ -1,6 +1,13 @@
 #!/bin/bash
+touch=$1
+test -z "$touch" && echo "kiosk iso will create without cursor! TOUCH SCREENS ONLY" && sleep 5
 rm -rf image_preseed.iso 
 rm -rf kiosk-netinstall.iso 
 cp ./SCRIPTS/preseed/postinst.sh /tmp/postinst.sh
+
+if [ "$touch" = "cursor" ]; then
+	sed -i 's/xserver-command=X -bs -s 0 -dpms -core -nocursor/xserver-command=X -bs -s 0 -dpms -core/' /tmp/postinst.sh
+fi
+
 ./SCRIPTS/preseed.sh -x -v -i debian-12.4.0-amd64-netinst.iso -p SCRIPTS/preseed/preseed.cfg -o kiosk-netinstall.iso
 rm /tmp/postinst.sh

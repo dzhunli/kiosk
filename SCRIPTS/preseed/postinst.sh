@@ -24,6 +24,7 @@ cat > "$autologin" << 'EOF1'
 [SeatDefaults]
 autologin-user=kiosk-user
 user-session=openbox
+xserver-command=X -bs -s 0 -dpms -core -nocursor
 EOF1
 mkdir -p /home/kiosk-user/.config/openbox
 cat > "$autostart" << 'EOF2'
@@ -36,10 +37,12 @@ google-chrome-stable \
     --disable-suggestions-service \
     --disable-save-password-bubble \
     --start-maximized \
-    --kiosk "http://example.org/" &
+    --auto-accept-camera-and-microphone-capture \
+    --kiosk "<your_url>" &
 EOF2
 chmod a+x "$autostart" 
 echo "/home/kiosk-user/.config/openbox/autostart" >> /home/kiosk-user/.bashrc
+echo "setterm -blank 0" >> /home/kiosk-user/.bashrc
 cp /etc/ssh/sshd_config /etc/ssh/sshd_config.original
 echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
