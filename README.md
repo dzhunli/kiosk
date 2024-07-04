@@ -43,7 +43,7 @@ Now you can burn the received iso to the drive using such tools as:
 
 ## DEMO OF INSTALLING
 
-<gif src='.preview/install.gif'</gif>
+![Install](.preview/install.gif)
 
 ### Authors
 
