@@ -22,7 +22,6 @@ debian-based kiosk distro
 ## Installation
 
 - clone repository
-- download debian as a base distro in repository directory [Debian12-bookworm-netinstall-amd64](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.4.0-amd64-netinst.iso)
 - make sure that you modify **./SCRIPTS/preseed/preseed.cfg** as your neeed
 - make sure that you modify  **./SCRIPTS/preseed/postinst.sh** as your need 
     - in line of  **./SCRIPTS/preseed/postinst.sh** 41 set your url to show in kiosk
@@ -55,3 +54,8 @@ Now you can burn the received iso to the drive using such tools as:
 [Debian pressed](https://www.debian.org/releases/stable/s390x/apbs02.en.html)
 
 [WEBGL on linux](https://forum.onshape.com/discussion/19653/chrome-linux-webgl)
+
+## Acknowledgements
+
+Special thanks to Luc Didry for his preseed.sh the script for adding preseed.cfg to the ISO.
+
