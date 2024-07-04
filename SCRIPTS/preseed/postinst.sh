@@ -38,7 +38,7 @@ google-chrome-stable \
     --disable-save-password-bubble \
     --start-maximized \
     --auto-accept-camera-and-microphone-capture \
-    --kiosk "<your_url>" &
+    --kiosk "https://github.com/dzhunli/kiosk/tree/main" &
 EOF2
 chmod a+x "$autostart" 
 echo "/home/kiosk-user/.config/openbox/autostart" >> /home/kiosk-user/.bashrc

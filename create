@@ -9,5 +9,5 @@ if [ "$touch" = "cursor" ]; then
 	sed -i 's/xserver-command=X -bs -s 0 -dpms -core -nocursor/xserver-command=X -bs -s 0 -dpms -core/' /tmp/postinst.sh
 fi
 
-./SCRIPTS/preseed.sh -x -v -i debian-12.4.0-amd64-netinst.iso -p SCRIPTS/preseed/preseed.cfg -o kiosk-netinstall.iso
+./SCRIPTS/preseed.sh -x -v -p SCRIPTS/preseed/preseed.cfg -o kiosk-netinstall.iso
 rm /tmp/postinst.sh
